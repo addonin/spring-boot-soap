@@ -1,1 +1,1 @@
-https://github.com/addonin/spring-boot-rest
+https://github.com/addonin/spring-boot-soap
