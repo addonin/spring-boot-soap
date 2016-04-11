@@ -15,6 +15,9 @@ public class Seat {
         this.vip = false;
     }
 
+    public Seat() {
+    }
+
     public int getNumber() {
         return number;
     }

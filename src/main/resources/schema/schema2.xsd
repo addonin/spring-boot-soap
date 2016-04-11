@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://epam.com/spring/advanced/soap" version="1.0">
+
+  <xs:import namespace="http://epam.com/spring/advanced/soap" schemaLocation="schema1.xsd"/>
+
+  <xs:element name="usersRequest" type="usersRequest"/>
+
+  <xs:element name="usersResponse" type="usersResponse"/>
+
+  <xs:complexType name="usersRequest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="usersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="users">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="user" type="ns1:user"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="rating">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LOW"/>
+      <xs:enumeration value="MID"/>
+      <xs:enumeration value="HIGH"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ticketState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BOOKED"/>
+      <xs:enumeration value="FREE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="role">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BOOKING_MANAGER"/>
+      <xs:enumeration value="REGISTERED_USER"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

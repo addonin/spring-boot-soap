@@ -1,9 +1,5 @@
 package com.epam.springadvanced.domain.entity;
 
-/**
- * @author dmytro_adonin
- * @since 4/1/2016.
- */
 public class UserAccount {
 
     private long id;

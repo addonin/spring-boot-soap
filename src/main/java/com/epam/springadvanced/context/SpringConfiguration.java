@@ -22,7 +22,8 @@ import java.util.Set;
 @Configuration
 @Import({AspectConfiguration.class,
         DataConfiguration.class,
-        AuditoriumConfiguration.class
+        AuditoriumConfiguration.class,
+        SoapWSConfiguration.class
 })
 @PropertySource("classpath:data/auditorium1.properties")
 @PropertySource("classpath:data/auditorium2.properties")

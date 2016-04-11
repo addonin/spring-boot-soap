@@ -1,7 +1,9 @@
 package com.epam.springadvanced.domain.entity;
 
 import com.epam.springadvanced.domain.enums.Role;
+import com.epam.springadvanced.utils.adapter.LocalDateXmlAdapter;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -69,6 +71,7 @@ public class User {
         this.email = email;
     }
 
+    @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
     public LocalDate getBirthday() {
         return birthday;
     }

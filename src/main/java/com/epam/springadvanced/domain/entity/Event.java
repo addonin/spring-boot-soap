@@ -1,8 +1,10 @@
 package com.epam.springadvanced.domain.entity;
 
 import com.epam.springadvanced.domain.enums.Rating;
+import com.epam.springadvanced.utils.adapter.LocalDateTimeXmlAdapter;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDateTime;
 
 public class Event {
@@ -49,6 +51,7 @@ public class Event {
         this.name = name;
     }
 
+    @XmlJavaTypeAdapter(LocalDateTimeXmlAdapter.class)
     public LocalDateTime getDateTime() {
         return dateTime;
     }
